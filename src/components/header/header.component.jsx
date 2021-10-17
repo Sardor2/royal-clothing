@@ -23,6 +23,12 @@ const Header = ({ currentUser, hidden }) => (
       <Logo className='logo' />
     </LogoContainer>
     <OptionsContainer>
+        {
+        currentUser ?  <OptionLink to={'/'}>
+            {currentUser.email}
+        </OptionLink>:null
+        }
+
       <OptionLink to='/shop'>SHOP</OptionLink>
       <OptionLink to='/shop'>CONTACT</OptionLink>
       {currentUser ? (
